@@ -906,35 +906,6 @@ document.addEventListener('keydown',e=>{
   if(currentPage==='thermal'){if(e.key==='ArrowRight'||e.key==='ArrowDown')tGo(tCur+1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')tGo(tCur-1);}
 });
 </script>
-<script>
-function showPage(name){
-  document.querySelectorAll('.page').forEach(p=>{
-    p.classList.remove('active');
-  });
-
-  const page = document.getElementById('page-'+name);
-  if(page) page.classList.add('active');
-
-  document.querySelectorAll('.nav-links button')
-    .forEach(b=>b.classList.remove('here'));
-
-  const nav = document.getElementById('nav-'+name);
-  if(nav) nav.classList.add('here');
-}
-
-let mIndex = 0;
-
-function mGo(i){
-  const track = document.getElementById('m-track');
-  const items = document.querySelectorAll('#m-sidebar .sitem');
-
-  mIndex = i;
-  track.style.transform = `translateX(-${i*100}%)`;
-
-  items.forEach(el=>el.classList.remove('active'));
-  items[i].classList.add('active');
-}
-</script>
 </body>
 </body>
 </html>
